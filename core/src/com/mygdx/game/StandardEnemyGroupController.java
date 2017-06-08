@@ -15,7 +15,7 @@ public class StandardEnemyGroupController {
     private int direction = 1;
     private int speed = 20;
     private long lastTime;
-    private int updateInterval = 500;
+    private int updateInterval = 750;
     private static final int fallBy = 60;
     public StandardEnemyGroupController(ArrayList<Enemy> enemies, float leftScreenBound, float rightScreenBound, float leftEnemyBound, float rightEnemyBound) {
         this.leftScreenBound = leftScreenBound;
@@ -40,13 +40,13 @@ public class StandardEnemyGroupController {
 
             if(leftEnemyBound < leftScreenBound) {
                 direction = 1;
-                updateInterval -= 40;
+                updateInterval -= 55;
                 for(Enemy enemy : enemies) {
                     enemy.getSprite().translateY(-fallBy);
                 }
             } else if (rightEnemyBound > rightScreenBound) {
                 direction = -1;
-                updateInterval -= 40;
+                updateInterval -= 55;
                 for(Enemy enemy: enemies) {
                     enemy.getSprite().translateY(-fallBy);
                 }

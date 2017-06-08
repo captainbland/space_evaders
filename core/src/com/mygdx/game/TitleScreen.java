@@ -49,8 +49,8 @@ public class TitleScreen implements Screen, ScreenChanger {
 
         this.game = game;
         batch = new SpriteBatch();
-        backgroundImg = new Texture("public_space_evaders_title.png");
-        pressStartImg = new Texture("press_start.png");
+        backgroundImg = new Texture(Gdx.files.internal("public_space_evaders_title.png"));
+        pressStartImg = new Texture(Gdx.files.internal("press_start.png"));
         new Timer().scheduleTask(new Timer.Task() {
             @Override
             public void run() {

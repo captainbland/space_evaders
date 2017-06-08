@@ -16,8 +16,8 @@ public class Enemy {
     Sprite sprite;
     private int health = 1;
     long lastTick = 0;
-    public static final int width = 50;
-    public static final int height = 60;
+    public static final int width = 42;
+    public static final int height = 50;
     Texture explodeTexture;
     boolean flashOff = false;
     boolean destroyed = false;
